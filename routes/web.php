@@ -24,3 +24,7 @@ Route::get('/index', function () {
 Route::get('/blank', function () {
     return view('backend.blank');
 });
+
+route::get('/about', function(){
+    return view('backend.pages.about.about');
+});
