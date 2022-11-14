@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,8 @@ Route::get('/index', function () {
 Route::get('/blank', function () {
     return view('backend.blank');
 });
-
-route::get('/about', function(){
-    return view('backend.pages.about.about');
+Route::group(['prefix'=> 'about'], function(){
+    Route::get('/create', [AboutController::class, 'create'])->name('about');
+    Route::post('/update', [AboutController::class, 'update'])->name('aboutupdate');
 });
+

@@ -23,8 +23,8 @@
             <span class="menu-item-label">Seller</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Seller</a></li>  
-            <li class="sub-item"><a href="" class="sub-link">Add Seller</a></li>              
+            <li class="sub-item"><a href="" class="sub-link">Manage Seller</a></li>
+            <li class="sub-item"><a href="" class="sub-link">Add Seller</a></li>
           </ul>
         </li>
         <!-------------------------- Category -------------------------->
@@ -34,8 +34,8 @@
             <span class="menu-item-label">Category</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Category</a></li>  
-            <li class="sub-item"><a href="" class="sub-link">Add Category</a></li>              
+            <li class="sub-item"><a href="" class="sub-link">Manage Category</a></li>
+            <li class="sub-item"><a href="" class="sub-link">Add Category</a></li>
           </ul>
         </li>
         <!-------------------------- Sub Category -------------------------->
@@ -45,8 +45,8 @@
             <span class="menu-item-label">Sub Category</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Sub-Category</a></li>  
-            <li class="sub-item"><a href="" class="sub-link">Add Sub-Category</a></li>              
+            <li class="sub-item"><a href="" class="sub-link">Manage Sub-Category</a></li>
+            <li class="sub-item"><a href="" class="sub-link">Add Sub-Category</a></li>
           </ul>
         </li>
         <!-------------------------- product -------------------------->
@@ -56,8 +56,8 @@
             <span class="menu-item-label">Product</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Product</a></li>  
-            <li class="sub-item"><a href="" class="sub-link">Add Product</a></li>              
+            <li class="sub-item"><a href="" class="sub-link">Manage Product</a></li>
+            <li class="sub-item"><a href="" class="sub-link">Add Product</a></li>
           </ul>
         </li>
         <!-------------------------- Slider -------------------------->
@@ -67,8 +67,8 @@
             <span class="menu-item-label">Slider</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Slider</a></li>  
-            <li class="sub-item"><a href="" class="sub-link">Add Slider</a></li>              
+            <li class="sub-item"><a href="" class="sub-link">Manage Slider</a></li>
+            <li class="sub-item"><a href="" class="sub-link">Add Slider</a></li>
           </ul>
         </li>
         <!-------------------------- Coupon -------------------------->
@@ -78,8 +78,8 @@
             <span class="menu-item-label">Coupon</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Coupon</a></li>  
-            <li class="sub-item"><a href="" class="sub-link">Add Coupon</a></li>              
+            <li class="sub-item"><a href="" class="sub-link">Manage Coupon</a></li>
+            <li class="sub-item"><a href="" class="sub-link">Add Coupon</a></li>
           </ul>
         </li>
         <!-------------------------- Review -------------------------->
@@ -89,7 +89,7 @@
             <span class="menu-item-label">Review</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Review</a></li>           
+            <li class="sub-item"><a href="" class="sub-link">Manage Review</a></li>
           </ul>
         </li>
         <!-------------------------- Comments -------------------------->
@@ -99,7 +99,7 @@
             <span class="menu-item-label">Comments</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage comments</a></li>           
+            <li class="sub-item"><a href="" class="sub-link">Manage comments</a></li>
           </ul>
         </li>
         <!-------------------------- Message -------------------------->
@@ -109,10 +109,16 @@
             <span class="menu-item-label">Message</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Massage</a></li>           
+            <li class="sub-item"><a href="" class="sub-link">Massage</a></li>
           </ul>
         </li>
-        
+        <li class="br-menu-item">
+            <a href="{{ route('about') }}" class="br-menu-link">
+                <i class="menu-item-icon icon ion-gear-a tx-22"></i>
+                <span class="menu-item-label">Setting</span>
+            </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+
       <br>
     </div><!-- br-sideleft -->
     <!-- ########## END: LEFT PANEL ########## -->

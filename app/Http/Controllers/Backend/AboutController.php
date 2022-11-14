@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Backend\About;
+use Image;
+use File;
 
 class AboutController extends Controller
 {
@@ -14,7 +17,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -24,7 +27,8 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        $about= About::first();
+        return view('backend.pages.about.about', compact($about));
     }
 
     /**
@@ -67,9 +71,41 @@ class AboutController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    // $setting= Setting::first();
+    //     $setting-> company_name =$request->company_name;
+    //     $setting-> company_phone =$request-> company_phone;
+    //     if($request->pic){
+    //         if(File::exists('backend/logo/'.$setting->pic)){
+    //             File::delete('backend/logo/'.$setting->pic);
+    //             $image=$request->file('pic');
+    //             $imgCustomName=rand().'.'.$image->getClientOriginalExtension();
+    //             $location=public_path('backend/logo/'.$imgCustomName);
+    //             Image::make($image)->save($location);
+    //             $setting->pic=$imgCustomName;
+    //         }
+    //     }
+    public function update(Request $request)
     {
-        //
+        $about= About::first();
+        $about->name= $request->name;
+        $about->dob= $request->dob;
+        $about->address= $request->address;
+        $about->number= $request->number;
+        if($request->pic){
+                if(File::exists('backend/pic/'.$about->pic)){
+                    File::delete('backend/pic/'.$about->pic);
+                    $image=$request->file('pic');
+                    $imgCustomName=rand().'.'.$image->getClientOriginalExtension();
+                    $location=public_path('backend/pic/'.$imgCustomName);
+                    Image::make($image)->save($location);
+                    $about->pic=$imgCustomName;
+                }
+            }
+        $about->email= $request->email;
+        $about->website= $request->website;
+        $about->project_complete= $request->project_complete;
+        $about->update();
+        return redirect()->back();
     }
 
     /**

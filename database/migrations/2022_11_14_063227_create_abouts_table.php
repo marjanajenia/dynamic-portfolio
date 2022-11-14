@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('dob')->nullable();
             $table->string('address')->nullable();
-            $table->integer('number')->nullable();
+            $table->string('number')->nullable();
             $table->string('pic')->nullable();
             $table->string('email')->nullable();
             $table->string('website')->nullable();
-            $table->integer('project_complete')->nullable();
+            $table->string('project_complete')->nullable();
             $table->timestamps();
         });
     }
