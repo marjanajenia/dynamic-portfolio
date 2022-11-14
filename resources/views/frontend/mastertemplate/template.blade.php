@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    @php
+    $about=App\Models\Backend\About::first();
+    @endphp
   <head>
     <!-- head -->
     @include('frontend.includes.head')
@@ -33,7 +36,7 @@
                 <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
                     <div class="text text-center">
                         <span class="subheading">Hey! I am</span>
-                        <h1>Ronaldo Fredrickson</h1>
+                        <h1>{{ $about->name }}</h1>
                         <h2>I am a
                              <span class="txt-rotate" data-period="2000"
                                 data-rotate='[ "Web Designer.", "Developer.", "Photographer.", "Marketer.", "Blogger" ]'>

@@ -118,6 +118,13 @@
                 <span class="menu-item-label">Setting</span>
             </a><!-- br-menu-link -->
         </li><!-- br-menu-item -->
+        <!-----live---->
+        <li class="br-menu-item">
+            <a target="_blank" href="{{ route('index') }}" class="br-menu-link">
+                <i class="menu-item-icon icon ion-gear-a tx-22"></i>
+                <span class="menu-item-label">live</span>
+            </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
 
       <br>
     </div><!-- br-sideleft -->

@@ -34,15 +34,19 @@
                                     <label for="file">Picture</label>
                                     <input type="file" class="form-control" name="pic" id="pic">
                                     <div class="text-center mt-4">
-                                        <img width="150" id="pic" src="{{ asset('backend/pic/'.$about->pic) }}" class="img-fluid" alt="" >
+                                        <img width="120" id="pic" src="{{ asset('backend/pic/'.$about->pic) }}" class="img-fluid" alt="" >
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="file">CV</label>
+                                    <input type="file" class="form-control" name="cv" id="cv" placeholder="Drop your cv" value="{{ $about->cv }}">
+                                </div>
                                 <div class="form-group">
                                     <label for="number">Contact Number</label>
                                     <input type="text" class="form-control" name="number" id="number" placeholder="Enter Your Contact Number" value="{{ $about->number }}">
                                 </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" value="{{ $about->email }}">
@@ -58,6 +62,18 @@
                                 <div class="form-group">
                                     <label for="project_complete">Project complete</label>
                                     <input type="text" class="form-control" name="project_complete" id="project_complete" placeholder="Enter your complete project number" value="{{$about->project_complete}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="twitter">Twitter Link</label>
+                                    <input type="text" class="form-control" name="twitter_link" id="twitter_link" placeholder="Enter your Twitter link" value="{{ $about->twitter_link }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="facebook">Facebook Link</label>
+                                    <input type="text" class="form-control" name="facebook_link" id="facebook_link" placeholder="Enter your facebook link" value="{{ $about->facebook_link }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instragram">Instagram Link</label>
+                                    <input type="text" class="form-control" name="instragram_link" id="instragram_link" placeholder="Enter your instagram link" value="{{ $about->instragram_link }}">
                                 </div>
                                 <br>
                                 <div class="form-group">

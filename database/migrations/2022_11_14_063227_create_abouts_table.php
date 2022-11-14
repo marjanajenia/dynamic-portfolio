@@ -20,9 +20,14 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('number')->nullable();
             $table->string('pic')->nullable();
+            $table->string('cv')->nullable();
             $table->string('email')->nullable();
             $table->string('website')->nullable();
+            $table->string('zip_code')->nullable();
             $table->string('project_complete')->nullable();
+            $table->string('twitter_link')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('instragram_link')->nullable();
             $table->timestamps();
         });
     }

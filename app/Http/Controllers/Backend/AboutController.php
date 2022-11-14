@@ -101,9 +101,14 @@ class AboutController extends Controller
                     $about->pic=$imgCustomName;
                 }
             }
+        $about->cv= $request->cv;
         $about->email= $request->email;
         $about->website= $request->website;
+        $about->zip_code=$request->zip_code;
         $about->project_complete= $request->project_complete;
+        $about->twitter_link= $request->twitter_link;
+        $about->facebook_link= $request->facebook_link;
+        $about->instragram_link= $request->instragram_link;
         $about->update();
         return redirect()->back();
     }

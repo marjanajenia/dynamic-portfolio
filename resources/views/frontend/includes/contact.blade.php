@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7 ftco-animate text-center">
-                <h2>I'm <span>Available</span> for freelancing</h2>
+                <h2>I am <span>Available</span> for freelancing</h2>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                 <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
             </div>
@@ -28,7 +28,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Address</h3>
-                  <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                  <p>{{ $about->address }}</p>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Contact Number</h3>
-                  <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+                  <p><a href="tel://1234567920">{{ $about->number }}</a></p>
               </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Email Address</h3>
-                  <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                  <p><a href="mailto:info@yoursite.com">{{ $about->email }}</a></p>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Website</h3>
-                  <p><a href="#">yoursite.com</a></p>
+                  <p><a href="#">{{ $about->website }}</a></p>
               </div>
             </div>
         </div>

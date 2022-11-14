@@ -18,7 +18,7 @@ Route::get('/dashboard', function () {
     return view('backend.dashboard');
 })->name('dashboard');
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('frontend.mastertemplate.template');
 })->name('index');
 
