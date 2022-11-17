@@ -20,6 +20,16 @@
     <script src="{{ asset('backend')}}/js/map.shiftworker.js"></script>
     <script src="{{ asset('backend')}}/js/ResizeSensor.js"></script>
     <script src="{{ asset('backend')}}/js/dashboard.js"></script>
+    {{-- DataTable --}}
+    <script src="{{ asset('backend/assets/lib/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js') }}"></script>
+
+    <script src="{{asset('backend/assets/js/bracket.js')}}"></script>
+    <script src="{{asset('backend/assets/js/map.shiftworker.js')}}"></script>
+    <script src="{{asset('backend/assets/js/ResizeSensor.js')}}"></script>
+    <script src="{{asset('backend/assets/js/dashboard.js')}}"></script>
     <script>
       $(function(){
         'use strict'

@@ -69,23 +69,44 @@
 
       <div class="row no-gutters block-9">
         <div class="col-md-6 order-md-last d-flex">
-          <form action="#" class="bg-light p-4 p-md-5 contact-form">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-            </div>
-          </form>
+            <form action="{{Route('contact.store')}}" method="post" class="bg-light p-4 p-md-5 contact-form">
+                @csrf
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" name="name" id="name" value="{{ old('name') }}">
+                    <span class="text-danger">
+                        @error('name')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" name="email" id="email" value="{{ old('email') }}">
+                    <span class="text-danger">
+                        @error('email')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject" value="{{ old('subject') }}">
+                    <span class="text-danger">
+                        @error('subject')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" >{{ old('message') }}</textarea>
+                    <span class="text-danger">
+                        @error('message')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </div>
+                <div class="form-group">
+                    <button type="btn btn-info"  class="btn btn-primary py-3 px-5">Send Message</button>
+                </div>
+            </form>
 
         </div>
 

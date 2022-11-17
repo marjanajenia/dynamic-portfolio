@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Frontend\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +29,9 @@ Route::get('/blank', function () {
 Route::group(['prefix'=> 'about'], function(){
     Route::get('/create', [AboutController::class, 'create'])->name('about');
     Route::post('/update', [AboutController::class, 'update'])->name('aboutupdate');
+});
+Route::group(['prefix' => 'contact'], function(){
+    Route::post('/', [ContactController::class, 'store'])->name('contact.store');
+    Route::get('/manage',[ContactController::class, 'index'])->name('contact.manage');
 });
 

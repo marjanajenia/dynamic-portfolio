@@ -71,19 +71,6 @@ class AboutController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // $setting= Setting::first();
-    //     $setting-> company_name =$request->company_name;
-    //     $setting-> company_phone =$request-> company_phone;
-    //     if($request->pic){
-    //         if(File::exists('backend/logo/'.$setting->pic)){
-    //             File::delete('backend/logo/'.$setting->pic);
-    //             $image=$request->file('pic');
-    //             $imgCustomName=rand().'.'.$image->getClientOriginalExtension();
-    //             $location=public_path('backend/logo/'.$imgCustomName);
-    //             Image::make($image)->save($location);
-    //             $setting->pic=$imgCustomName;
-    //         }
-    //     }
     public function update(Request $request)
     {
         $about= About::first();
