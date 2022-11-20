@@ -34,4 +34,9 @@ Route::group(['prefix' => 'contact'], function(){
     Route::post('/', [ContactController::class, 'store'])->name('contact.store');
     Route::get('/manage',[ContactController::class, 'index'])->name('contact.manage');
 });
+Route::group(['prefix' => 'award'], function(){
 
+});
+Route::get('/add', function(){
+    return view('backend.pages.award.addaward');
+})->name('add');

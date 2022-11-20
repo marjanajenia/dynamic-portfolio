@@ -1,5 +1,5 @@
 @extends('backend.mastertemplate.template')
-@section('maincontent')
+@section('content')
     <div class="br-pagetitle">
         <i class="icon ion-ios-home-outline"></i>
         <div>
@@ -10,31 +10,29 @@
 
     <div class="br-pagebody">
         <div class="card">
-            <div class="card-header">
-                <h4>All User <a class="btn btn-info btn-sm" href="" style="float: right;" data-toggle="modal"
-                        data-target="#exampleModal"> <i class="icon ion-plus-round"></i> Add User</a></h4>
-            </div>
             <div class="card-body">
                 <div class="table-wrapper">
                     <table id="datatable1" class="table display responsive nowrap">
                         <thead>
                             <tr>
-                                <th class="wd-10p">Serial</th>
-                                <th class="wd-20p">Name</th>
-                                <th class="wd-20p">Email</th>
-                                <th class="wd-20p">Subject</th>
+                                <th class="wd-5p">Serial</th>
+                                <th class="wd-10p">Name</th>
+                                <th class="wd-10p">Email</th>
+                                <th class="wd-10p">Subject</th>
                                 <th class="wd-30p">Message</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @php $sl=1; @endphp
                             @foreach ($contact as $data)
                                 <tr>
-                                    <td class="wd-10p">Image</td>
+                                    <td>{{ $sl }}</td>
                                     <td>{{ $data->name }}</td>
                                     <td>{{ $data->email }}</td>
                                     <td>{{ $data->subject }}</td>
                                     <td>{{ $data->message }}</td>
                                 </tr>
+                                @php $sl++; @endphp
                             @endforeach
                         </tbody>
                     </table>
