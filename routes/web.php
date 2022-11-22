@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Backend\AwardController;
+use App\Http\Controllers\Backend\EducationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,9 @@ Route::group(['prefix' => 'contact'], function(){
 Route::group(['prefix' => 'award'], function(){
     Route::get('/create', [AwardController::class, 'create'])->name('award.create');
     Route::post('/add', [AwardController::class, 'store'])->name('award.add');
+});
+Route::group(['prefix' => 'education'], Function(){
+    Route::get('/create', [EducationController::class, 'create'])->name('education.create');
+    Route::post('/add', [EducationController::class, 'store'])->name('education.add');
 });
 
