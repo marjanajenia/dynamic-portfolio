@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Backend\Award;
 
 class AwardController extends Controller
 {
@@ -24,7 +25,7 @@ class AwardController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.award.addaward');
     }
 
     /**
@@ -35,7 +36,19 @@ class AwardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'session' => 'required',
+            'award' => 'required',
+            'institute' => 'required',
+            'description' => 'required'
+        ]);
+        $award = new Award();
+        $award->session = $request->session;
+        $award->award = $request->award;
+        $award->institute = $request->institute;
+        $award->description = $request->description;
+        $award->save();
+        return redirect()->back();
     }
 
     /**

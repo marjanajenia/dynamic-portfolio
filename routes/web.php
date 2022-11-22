@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Backend\AwardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,7 @@ Route::group(['prefix' => 'contact'], function(){
     Route::get('/manage',[ContactController::class, 'index'])->name('contact.manage');
 });
 Route::group(['prefix' => 'award'], function(){
-
+    Route::get('/create', [AwardController::class, 'create'])->name('award.create');
+    Route::post('/add', [AwardController::class, 'store'])->name('award.add');
 });
-Route::get('/add', function(){
-    return view('backend.pages.award.addaward');
-})->name('add');
+
