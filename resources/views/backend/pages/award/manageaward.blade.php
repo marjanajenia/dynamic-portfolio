@@ -36,7 +36,7 @@
                             <td>{{ $data->institute}}</td>
                             <td>{{ $data->description}}</td>
                             <td>
-                                <a href="" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
+                                <a href="{{ Route('award.edit',$data->id) }}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
                                 <button class="btn btn-sm btn-danger"><i class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></button>
                             </td>
                         </tr>

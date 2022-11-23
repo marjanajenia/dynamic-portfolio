@@ -71,7 +71,8 @@ class AwardController extends Controller
      */
     public function edit($id)
     {
-        //
+        $award = Award::find($id);
+        return view('backend.pages.award.editaward', compact('award'));
     }
 
     /**
