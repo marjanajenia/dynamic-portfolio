@@ -23,7 +23,7 @@
             <span class="menu-item-label">Award</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Award</a></li>
+            <li class="sub-item"><a href="{{ Route('award.manage') }}" class="sub-link">Manage Award</a></li>
             <li class="sub-item"><a href="{{ Route('award.create') }}" class="sub-link">Add Award</a></li>
           </ul>
         </li>

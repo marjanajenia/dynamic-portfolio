@@ -15,7 +15,8 @@ class AwardController extends Controller
      */
     public function index()
     {
-        //
+        $award = Award::orderby('id', 'asc')->get();
+        return view('backend.pages.award.manageaward', compact('award'));
     }
 
     /**

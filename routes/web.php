@@ -39,9 +39,11 @@ Route::group(['prefix' => 'contact'], function(){
 Route::group(['prefix' => 'award'], function(){
     Route::get('/create', [AwardController::class, 'create'])->name('award.create');
     Route::post('/add', [AwardController::class, 'store'])->name('award.add');
+    Route::get('/manage', [AwardController::class, 'index'])->name('award.manage');
 });
 Route::group(['prefix' => 'education'], Function(){
     Route::get('/create', [EducationController::class, 'create'])->name('education.create');
     Route::post('/add', [EducationController::class, 'store'])->name('education.add');
 });
+
 

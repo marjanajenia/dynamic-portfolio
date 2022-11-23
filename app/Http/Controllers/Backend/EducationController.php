@@ -36,7 +36,19 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'session' => 'required',
+            'program' => 'required',
+            'institute' => 'required',
+            'description' => 'required',
+        ]);
+        $education = new Education();
+        $education->session = $request->session;
+        $education->program = $request->program;
+        $education->institute = $request->institute;
+        $education->description = $request->description;
+        $education->save();
+        return redirect()->back();
     }
 
     /**
