@@ -15,7 +15,8 @@ class EducationController extends Controller
      */
     public function index()
     {
-        //
+        $education = Education::orderby('id','asc')->get();
+        return view('backend.pages.education.manageeducation', compact('education'));
     }
 
     /**
@@ -70,7 +71,8 @@ class EducationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $education = Education::find($id);
+        return view('backend.pages.education.editeducation', compact('education'));
     }
 
     /**
@@ -82,7 +84,19 @@ class EducationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'session' => 'required',
+            'program' => 'required',
+            'institute' => 'required',
+            'description' => 'required',
+        ]);
+        $education = Education::find($id);
+        $education->session = $request->session;
+        $education->program = $request->program;
+        $education->institute = $request->institute;
+        $education->description = $request->description;
+        $education->update();
+        return redirect()->route('education.manage');
     }
 
     /**

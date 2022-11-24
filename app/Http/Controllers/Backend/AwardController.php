@@ -84,7 +84,19 @@ class AwardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'session' => 'required',
+            'award' => 'required',
+            'institute' => 'required',
+            'description' => 'required',
+        ]);
+        $award = Award::find($id);
+        $award->session = $request->session;
+        $award->award = $request->award;
+        $award->institute = $request->institute;
+        $award->description = $request->description;
+        $award->update();
+        return redirect()->route('award.manage');
     }
 
     /**

@@ -34,7 +34,7 @@
             <span class="menu-item-label">Education</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Manage Category</a></li>
+            <li class="sub-item"><a href="{{ Route('education.manage') }}" class="sub-link">Manage Education</a></li>
             <li class="sub-item"><a href="{{ Route('education.create') }}" class="sub-link">Add Education</a></li>
           </ul>
         </li>

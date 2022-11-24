@@ -41,11 +41,14 @@ Route::group(['prefix' => 'award'], function(){
     Route::post('/add', [AwardController::class, 'store'])->name('award.add');
     Route::get('/manage', [AwardController::class, 'index'])->name('award.manage');
     Route::get('/edit/{id}', [AwardController::class, 'edit'])->name('award.edit');
-    Route::get('/update/{id}', [AwardController::class, 'update'])->name('award.update');
+    Route::post('/update/{id}', [AwardController::class, 'update'])->name('award.update');
 });
 Route::group(['prefix' => 'education'], Function(){
     Route::get('/create', [EducationController::class, 'create'])->name('education.create');
     Route::post('/add', [EducationController::class, 'store'])->name('education.add');
+    Route::get('/manage', [EducationController::class, 'index'])->name('education.manage');
+    Route::get('/edit/{id}', [EducationController::class, 'edit'])->name('education.edit');
+    Route::post('/update/{id}', [EducationController::class, 'update'])->name('education.update');
 });
 
 
