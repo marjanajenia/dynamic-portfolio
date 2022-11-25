@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Backend\AwardController;
 use App\Http\Controllers\Backend\EducationController;
+use App\Http\Controllers\Backend\ExperienceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,13 @@ Route::group(['prefix' => 'education'], Function(){
     Route::get('/manage', [EducationController::class, 'index'])->name('education.manage');
     Route::get('/edit/{id}', [EducationController::class, 'edit'])->name('education.edit');
     Route::post('/update/{id}', [EducationController::class, 'update'])->name('education.update');
+});
+Route::group(['prefix' => 'experience'], function(){
+    Route::get('/create', [ExperienceController::class, 'create'])->name('experience.create');
+    Route::post('/add', [ExperienceController::class, 'store'])->name('experience.add');
+    Route::get('/manage', [ExperienceController::class, 'index'])->name('experience.manage');
+    Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('experience.edit');
+    Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('experience.update');
 });
 
 

@@ -38,6 +38,17 @@
             <li class="sub-item"><a href="{{ Route('education.create') }}" class="sub-link">Add Education</a></li>
           </ul>
         </li>
+        <!-------------------------- Experience -------------------------->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Experience</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{ Route('experience.manage') }}" class="sub-link">Manage Experience</a></li>
+            <li class="sub-item"><a href="{{ Route('experience.create') }}" class="sub-link">Add Experience</a></li>
+          </ul>
+        </li>
 
 
         <li class="br-menu-item">
