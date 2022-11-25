@@ -1,3 +1,7 @@
+@php
+    $education= App\Models\Backend\Education::all();
+    $award=App\Models\Backend\Award::all();
+@endphp
 <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
     <div class="container">
         <div class="row">
@@ -12,55 +16,25 @@
                   </nav>
                 </div>
                 <div class="col-md-9">
-                  <div id="page-1" class= "page one">
-                      <h2 class="heading">Education</h2>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
+                    <div id="page-1" class= "page one">
+                        <h2 class="heading">Education</h2>
+                        @foreach($education as $education)
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                <span class="date">{{ $education->session }}</span>
+                                <h2>{{ $education-> program }}</h2>
+                                <span class="position">{{ $education-> institute }}</span>
+                                <p>{{ $education->description }}</p>
+                            </div>
                         </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Bachelor of Science in Computer Science</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Computer Processing Systems/Computer Software</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Diploma in Computer</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Art &amp; Creative Director</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                  </div>
+                    <!------------Education end here-------------->
 
-                  <div id="page-2" class= "page two">
+                <div id="page-2" class= "page two">
                       <h2 class="heading">Experience</h2>
                     <div class="resume-wrap d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
@@ -128,7 +102,7 @@
                             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                         </div>
                     </div>
-                  </div>
+                </div>
                   <div id="page-3" class= "page three">
                       <h2 class="heading">Skills</h2>
                       <div class="row progress-circle mb-5">
@@ -294,54 +268,23 @@
                             </div>
                       </div>
                   </div>
-                  <div id="page-4" class= "page four">
+                <div id="page-4" class= "page four">
                     <h2 class="heading">Awards</h2>
+                    @foreach($award as $award)
                     <div class="resume-wrap d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="flaticon-ideas"></span>
                         </div>
                         <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Top 10 Web Developer</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <span class="date">{{ $award->session }}</span>
+                            <h2>{{ $award->award }}</h2>
+                            <span class="position">{{ $award->institute }}</span>
+                            <p>{{ $award->description }}</p>
                         </div>
                     </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Top 5 LeaderShip Exellence Winner</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Top 4 Web Tester</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-ideas"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2014-2015</span>
-                            <h2>Art &amp; Creative Director</h2>
-                            <span class="position">Cambridge University</span>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                  </div>
+                    @endforeach
                 </div>
-          </div>
+            </div>
+        </div>
     </div>
 </section>

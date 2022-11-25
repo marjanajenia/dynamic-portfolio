@@ -2,6 +2,7 @@
 <html lang="en">
     @php
     $about=App\Models\Backend\About::first();
+    //$education=App\Models\Backend\Education::all();
     @endphp
   <head>
     <!-- head -->

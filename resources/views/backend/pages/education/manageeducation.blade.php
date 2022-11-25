@@ -34,6 +34,7 @@
                             <td>{{ $data->description }}</td>
                             <td>
                                 <a href="{{ Route('education.edit',$data->id) }}" class="btn btn-info btn-sm" ><i class="fa fa-edit"></i></a>
+                                <a href="{{}}" id="delete" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                 <button class="btn btn-sm btn-danger"><i class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></button>
                             </td>
                         </tr>
