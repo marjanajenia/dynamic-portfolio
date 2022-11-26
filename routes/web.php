@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Backend\AwardController;
 use App\Http\Controllers\Backend\EducationController;
 use App\Http\Controllers\Backend\ExperienceController;
+use App\Http\Controllers\Backend\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,13 @@ Route::group(['prefix' => 'experience'], function(){
     Route::get('/manage', [ExperienceController::class, 'index'])->name('experience.manage');
     Route::get('/edit/{id}', [ExperienceController::class, 'edit'])->name('experience.edit');
     Route::post('/update/{id}', [ExperienceController::class, 'update'])->name('experience.update');
+});
+Route::group(['prefix' => 'service'], function(){
+    Route::get('/create', [ServiceController::class, 'create'])->name('service.create');
+    Route::post('/add', [ServiceController::class, 'store'])->name('service.add');
+    Route::get('/manage', [ServiceController::class, 'index'])->name('service.manage');
+    Route::get('/edit/{id}', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::post('/update/{id}', [ServiceController::class, 'update'])->name('service.update');
 });
 
 

@@ -9,14 +9,16 @@
         </div>
 </div>
     <div class="br-pagebody">
-        <div class="row row-sm"> 
-            <div class="col-sm-6 col-xl-3">
-                                      
-                  content                               
+        <div class="row row-sm">
+            <div class="col-md-12">
+                <div class="card p-3 shadow-base">
+
+                  content
+                </div>
             </div>
         </div>
     </div><!-- br-pagebody -->
 
 
 @endsection
-      
+
