@@ -36,6 +36,7 @@ Route::group(['prefix'=> 'about'], function(){
 Route::group(['prefix' => 'contact'], function(){
     Route::post('/', [ContactController::class, 'store'])->name('contact.store');
     Route::get('/manage',[ContactController::class, 'index'])->name('contact.manage');
+    Route::get('/delete/{id}',[ContactController::class, 'destroy'])->name('contact.delete');
 });
 Route::group(['prefix' => 'award'], function(){
     Route::get('/create', [AwardController::class, 'create'])->name('award.create');

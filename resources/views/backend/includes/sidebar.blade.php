@@ -49,7 +49,16 @@
             <li class="sub-item"><a href="{{ Route('experience.create') }}" class="sub-link">Add Experience</a></li>
           </ul>
         </li>
-
+        <!-------------------------- Message -------------------------->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Message</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{ Route('contact.manage') }}" class="sub-link">Manage Message</a></li>
+          </ul>
+        </li>
 
         <li class="br-menu-item">
             <a href="{{ route('about') }}" class="br-menu-link">
