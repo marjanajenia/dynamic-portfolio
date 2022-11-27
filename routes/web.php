@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\AwardController;
 use App\Http\Controllers\Backend\EducationController;
 use App\Http\Controllers\Backend\ExperienceController;
 use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,13 @@ Route::group(['prefix' => 'service'], function(){
     Route::get('/manage', [ServiceController::class, 'index'])->name('service.manage');
     Route::get('/edit/{id}', [ServiceController::class, 'edit'])->name('service.edit');
     Route::post('/update/{id}', [ServiceController::class, 'update'])->name('service.update');
+});
+Route::group(['prefix' => 'project'], function(){
+    Route::get('/create', [ProjectController::class, 'create'])->name('project.create');
+    Route::post('/add', [ProjectController::class, 'store'])->name('project.add');
+    Route::get('/manage', [ProjectController::class, 'index'])->name('project.manage');
+    Route::get('/edit/{id}', [ProjectController::class, 'edit'])->name('project.edit');
+    Route::post('/update/{id}', [ProjectController::class, 'update'])->name('project.update');
 });
 
 

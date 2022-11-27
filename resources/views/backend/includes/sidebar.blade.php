@@ -60,6 +60,17 @@
             <li class="sub-item"><a href="{{ Route('service.create') }}" class="sub-link">Add Service</a></li>
           </ul>
         </li>
+        <!-------------------------- Project -------------------------->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Project</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{ Route('project.manage') }}" class="sub-link">Manage Project</a></li>
+            <li class="sub-item"><a href="{{ Route('project.create') }}" class="sub-link">Add Project</a></li>
+          </ul>
+        </li>
         <!-------------------------- Message -------------------------->
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">

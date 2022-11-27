@@ -45,7 +45,7 @@
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <button class="form-control btn btn-info">Add Service Information</button>
+                                    <button class="form-control btn btn-info">Update Service Information</button>
                                 </div>
                             </div>
                         </div>
