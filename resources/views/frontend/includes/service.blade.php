@@ -1,3 +1,6 @@
+@php
+    $service=App\Models\Backend\Service::all();
+@endphp
 <section class="ftco-section" id="services-section">
     <div class="container-fluid px-md-5">
         <div class="row justify-content-center py-5 mt-5">
@@ -8,73 +11,19 @@
       </div>
     </div>
         <div class="row">
+            @foreach($service as $service)
                 <div class="col-md-4 text-center d-flex ftco-animate">
                     <a href="#" class="services-1 shadow">
                         <span class="icon">
-                            <i class="flaticon-analysis"></i>
+                            {{--  <i class="flaticon-analysis"></i>  --}}
+                            <i ><img width="100" src="{{ asset('backend/service/'.$service->pic) }}" alt="" ></i>
                         </span>
                         <div class="desc">
-                            <h3 class="mb-5">Web Design</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <h3 class="mb-5">{{ $service->service }}</h3>
+                            <p>{{ $service->description }}</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1 shadow">
-                        <span class="icon">
-                            <i class="flaticon-flasks"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Phtography</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1 shadow">
-                        <span class="icon">
-                            <i class="flaticon-ideas"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Web Developer</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1 shadow">
-                        <span class="icon">
-                            <i class="flaticon-innovation"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">App Developing</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1 shadow">
-                        <span class="icon">
-                            <i class="flaticon-ux-design"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Branding</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1 shadow">
-                        <span class="icon">
-                            <i class="flaticon-idea"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Product Strategy</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            @endforeach
     </div>
 </section>
