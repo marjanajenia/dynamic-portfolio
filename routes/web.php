@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\EducationController;
 use App\Http\Controllers\Backend\ExperienceController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\ProjectController;
+use App\Http\Controllers\Backend\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,6 +75,10 @@ Route::group(['prefix' => 'project'], function(){
     Route::get('/manage', [ProjectController::class, 'index'])->name('project.manage');
     Route::get('/edit/{id}', [ProjectController::class, 'edit'])->name('project.edit');
     Route::post('/update/{id}', [ProjectController::class, 'update'])->name('project.update');
+});
+Route::group(['prefix' => 'skill'], function(){
+    Route::get('/manage', [SkillController::class, 'index'])->name('skill.manage');
+    Route::post('/update', [SkillController::class, 'update'])->name('skill.update');
 });
 
 

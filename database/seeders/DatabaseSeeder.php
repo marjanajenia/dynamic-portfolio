@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use \App\Models\Backend\About;
+use \App\Models\Backend\Skill;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +24,9 @@ class DatabaseSeeder extends Seeder
         // ]);
         About::create([
             'name' => 'test',
+        ]);
+        Skill::create([
+            'photoshop' => '1',
         ]);
     }
 }
